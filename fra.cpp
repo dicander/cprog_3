@@ -8,7 +8,7 @@ bool subsequence(T target_begin, T target_end, U spy_begin, U spy_end) {
 	if(target_begin == target_end) {
 		return false;
 	}
-	for(;spy_begin != spy_end; ++spy_begin) {
+	for(; spy_begin != spy_end; ++spy_begin) {
 		if(*target_begin == *spy_begin) {
 			++target_begin;
 			if(target_begin == target_end) {
@@ -27,10 +27,10 @@ struct Nod {
 	~Nod() {
 		Nod* current = this;
 		Nod* next_kill = this->next;
-		while(current!=nullptr) {
+		while(current != nullptr) {
 			delete current;
-			current=next_kill;
-			next_kill=next_kill->next;
+			current = next_kill;
+			next_kill = next_kill->next;
 		}
 	}
 };
@@ -39,16 +39,16 @@ struct Nod {
 * Assumes that T implements =,> 
 */
 template<typename T> 
-void insert(Nod<T> * & p, T data) {
+void insert(Nod<T> * & p, T payload) {
 	if(p == nullptr) {
-		p = new Nod<T>(data);
+		p = new Nod<T>(payload);
 	} else {
-		if (p->data > data) {
-			Nod<T> * tmp = new Nod<T>(data);
+		if (p->data > payload) {
+			Nod<T> * tmp = new Nod<T>(payload);
 			tmp->next = p;
 			p = tmp;
 		} else {
-			insert(p->next, data);
+			insert(p->next, payload);
 		}
 	}
 
