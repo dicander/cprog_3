@@ -3,12 +3,12 @@ using namespace std;
 struct TheMatrix{
   virtual TheMatrix foo() 
     {
-      cout<<"TheMatrix::foo()";return∗this;
+      cout<<"TheMatrix::foo()";return *this;
     }
 };
 struct TheWorld:TheMatrix{
   virtual TheMatrix foo(){
-    cout<<"TheWorld::foo()";return∗this;
+    cout<<"TheWorld::foo()";return *this;
   }
 };
 int main(){
