@@ -19,6 +19,12 @@ bool subsequence(T target_begin, T target_end, U spy_begin, U spy_end) {
 	return false;
 }
 
+// target = [1, 2, 3] target_end
+                          ^
+// spy = [4, 6, 1, 1, 2, 4, 3] spy_end
+                            ^
+
+
 template<typename T>
 struct Nod {
 	T data;

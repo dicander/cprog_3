@@ -18,9 +18,11 @@ int main() {
   derived derived_object;
   base base_object = derived_object;
   base & ref = derived_object;
+  base evil = derived_object;
   cout << endl << "a) "; derived_object.foo();
   cout << endl << "b) "; base_object.foo();
   cout << endl << "c) "; ref.foo();
   cout << endl << "d) "; ref.foo().foo();
-  cout << endl << "e) "; derived_object.goo().foo();cout << endl;
+  cout << endl << "e) "; derived_object.goo().foo();
+  cout << endl << "f) "; evil.foo();cout << endl;
 }
