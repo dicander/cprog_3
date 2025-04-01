@@ -64,13 +64,14 @@ void find_and_print_longest_increasing_subsequence(T begin, T end) {
 
 
 int main(){
+	// Reads the lenght of the list and then the ints of the list
 	int n;
 	while(scanf("%d", &n)==1) {
 		vector<int> v(n);
 		for(int i=0; i<n; ++i){
 			scanf("%d", &v[i]);
 		}
-		//printf("length %d\n", longest_increasing_subsequence_length(v.begin(), v.end()));
+		printf("length %d\n", longest_increasing_subsequence_length(v.begin(), v.end()));
 		find_and_print_longest_increasing_subsequence(v.begin(), v.end());
 	}
 }
