@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-static const int N_FUTURES = 10000;
+static const int N_FUTURES = 1000;
 
 int print_and_return_value(int value) {
 	cout << value << " ";

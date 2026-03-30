@@ -36,8 +36,10 @@ int main() {
     d = b;
     cout << "D) ";
     d = d;
+    cout << "E) "; 
     void* dp;
     d.foo((base*)dp);
     derived& d2 = d;
     d.goo(d2);
+    cout << endl;
 }
