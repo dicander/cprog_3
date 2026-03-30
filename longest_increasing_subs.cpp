@@ -16,7 +16,7 @@ int longest_increasing_subsequence_length(T begin, T end){
 	for(auto it = begin; it != end; ++it){
 		*(lower_bound(d.begin(), d.end(), *it)) = *it;
 	}
-	return distance(d.begin(),lower_bound(d.begin(), d.end(), inf));
+	return distance(d.begin(), lower_bound(d.begin(), d.end(), inf));
 }
 
 template<typename T>
